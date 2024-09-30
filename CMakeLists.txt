@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(TodoListApp)
+add_subdirectory(lib/googletest)
+include_directories(include)
+add_executable(runTests src/TodoList.cpp tests/TodoListTest.cpp)
+target_link_libraries(runTests gtest gtest_main pthread)
